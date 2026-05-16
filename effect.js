@@ -2,19 +2,61 @@ $(window).load(function(){
 	$('.loading').fadeOut('fast');
 	$('.container').fadeIn('fast');
 });
-$('document').ready(function(){
-		var vw;
-		$(window).resize(function(){
-			 vw = $(window).width()/2;
-			$('#b1,#b2,#b3,#b4,#b5,#b6,#b7').stop();
-			$('#b11').animate({top:240, left: vw-350},500);
-			$('#b22').animate({top:240, left: vw-250},500);
-			$('#b33').animate({top:240, left: vw-150},500);
-			$('#b44').animate({top:240, left: vw-50},500);
-			$('#b55').animate({top:240, left: vw+50},500);
-			$('#b66').animate({top:240, left: vw+150},500);
-			$('#b77').animate({top:240, left: vw+250},500);
+
+$(document).ready(function(){
+	var vw;
+	var MOBILE_MAX = 430;
+	var BALLOON_W_DESKTOP = 100;
+	var BALLOON_W_MOBILE = 58;
+
+	function balloonWidth() {
+		return $(window).width() <= MOBILE_MAX ? BALLOON_W_MOBILE : BALLOON_W_DESKTOP;
+	}
+
+	function randomBalloonPosition() {
+		var w = $(window).width();
+		var h = $(window).height();
+		var bw = balloonWidth();
+		var maxLeft = Math.max(0, w - bw - 4);
+		var maxBottom = Math.max(60, h * 0.5);
+		return {
+			left: Math.random() * maxLeft,
+			bottom: 20 + Math.random() * maxBottom
+		};
+	}
+
+	function startBalloonLoop(selector) {
+		function loop() {
+			var pos = randomBalloonPosition();
+			$(selector).animate(pos, 10000, loop);
+		}
+		loop();
+	}
+
+	function layoutWishBalloons() {
+		var w = $(window).width();
+		var h = $(window).height();
+		var ids = ['#b11', '#b22', '#b33', '#b44', '#b55', '#b66', '#b77'];
+		if (!$(ids[0]).length) {
+			return;
+		}
+		var bw = balloonWidth();
+		var n = ids.length;
+		var top = Math.min(w <= MOBILE_MAX ? 120 : 200, h * 0.2);
+		var gap = Math.max(2, (w - n * bw) / (n + 1));
+
+		ids.forEach(function (sel, i) {
+			$(sel).stop().animate({
+				top: top,
+				left: gap + i * (bw + gap),
+				bottom: 'auto'
+			}, 500);
 		});
+	}
+
+	$(window).on('resize orientationchange', function () {
+		layoutWishBalloons();
+	});
 
 	$('#turn_on').click(function(){
 		$('#bulb_yellow').addClass('bulb-glow-yellow');
@@ -28,16 +70,17 @@ $('document').ready(function(){
 			$('#play').fadeIn('slow');
 		});
 	});
+
 	$('#play').click(function(){
 		var audio = $('.song')[0];
-        audio.play();
-        $('#bulb_yellow').addClass('bulb-glow-yellow-after');
+		audio.play();
+		$('#bulb_yellow').addClass('bulb-glow-yellow-after');
 		$('#bulb_red').addClass('bulb-glow-red-after');
 		$('#bulb_blue').addClass('bulb-glow-blue-after');
 		$('#bulb_green').addClass('bulb-glow-green-after');
 		$('#bulb_pink').addClass('bulb-glow-pink-after');
 		$('#bulb_orange').addClass('bulb-glow-orange-after');
-		$('body').css('backgroud-color','#FFF');
+		$('body').css('background-color','#FFF5F8');
 		$('body').addClass('peach-after');
 		$(this).fadeOut('slow').delay(6000).promise().done(function(){
 			$('#bannar_coming').fadeIn('slow');
@@ -46,83 +89,29 @@ $('document').ready(function(){
 
 	$('#bannar_coming').click(function(){
 		$('.bannar').addClass('bannar-come');
+		$('.jennie-row').addClass('is-visible').fadeIn(1200);
 		$(this).fadeOut('slow').delay(6000).promise().done(function(){
 			$('#balloons_flying').fadeIn('slow');
 		});
 	});
 
-	function loopOne() {
-		var randleft = 1000*Math.random();
-		var randtop = 500*Math.random();
-		$('#b1').animate({left:randleft,bottom:randtop},10000,function(){
-			loopOne();
-		});
-	}
-	function loopTwo() {
-		var randleft = 1000*Math.random();
-		var randtop = 500*Math.random();
-		$('#b2').animate({left:randleft,bottom:randtop},10000,function(){
-			loopTwo();
-		});
-	}
-	function loopThree() {
-		var randleft = 1000*Math.random();
-		var randtop = 500*Math.random();
-		$('#b3').animate({left:randleft,bottom:randtop},10000,function(){
-			loopThree();
-		});
-	}
-	function loopFour() {
-		var randleft = 1000*Math.random();
-		var randtop = 500*Math.random();
-		$('#b4').animate({left:randleft,bottom:randtop},10000,function(){
-			loopFour();
-		});
-	}
-	function loopFive() {
-		var randleft = 1000*Math.random();
-		var randtop = 500*Math.random();
-		$('#b5').animate({left:randleft,bottom:randtop},10000,function(){
-			loopFive();
-		});
-	}
-
-	function loopSix() {
-		var randleft = 1000*Math.random();
-		var randtop = 500*Math.random();
-		$('#b6').animate({left:randleft,bottom:randtop},10000,function(){
-			loopSix();
-		});
-	}
-	function loopSeven() {
-		var randleft = 1000*Math.random();
-		var randtop = 500*Math.random();
-		$('#b7').animate({left:randleft,bottom:randtop},10000,function(){
-			loopSeven();
-		});
-	}
-
 	$('#balloons_flying').click(function(){
-		$('.balloon-border').animate({top:-500},8000);
+		var borderTop = -Math.min(500, $(window).height() * 0.55);
+		$('.balloon-border').animate({ top: borderTop }, 8000);
 		$('#b1,#b4,#b5,#b7').addClass('balloons-rotate-behaviour-one');
 		$('#b2,#b3,#b6').addClass('balloons-rotate-behaviour-two');
-		// $('#b3').addClass('balloons-rotate-behaviour-two');
-		// $('#b4').addClass('balloons-rotate-behaviour-one');
-		// $('#b5').addClass('balloons-rotate-behaviour-one');
-		// $('#b6').addClass('balloons-rotate-behaviour-two');
-		// $('#b7').addClass('balloons-rotate-behaviour-one');
-		loopOne();
-		loopTwo();
-		loopThree();
-		loopFour();
-		loopFive();
-		loopSix();
-		loopSeven();
-		
+		startBalloonLoop('#b1');
+		startBalloonLoop('#b2');
+		startBalloonLoop('#b3');
+		startBalloonLoop('#b4');
+		startBalloonLoop('#b5');
+		startBalloonLoop('#b6');
+		startBalloonLoop('#b7');
+
 		$(this).fadeOut('slow').delay(5000).promise().done(function(){
 			$('#cake_fadein').fadeIn('slow');
 		});
-	});	
+	});
 
 	$('#cake_fadein').click(function(){
 		$('.cake').fadeIn('slow');
@@ -138,64 +127,50 @@ $('document').ready(function(){
 		});
 	});
 
-		
 	$('#wish_message').click(function(){
-		 vw = $(window).width()/2;
-
 		$('#b1,#b2,#b3,#b4,#b5,#b6,#b7').stop();
 		$('#b1').attr('id','b11');
-		$('#b2').attr('id','b22')
-		$('#b3').attr('id','b33')
-		$('#b4').attr('id','b44')
-		$('#b5').attr('id','b55')
-		$('#b6').attr('id','b66')
-		$('#b7').attr('id','b77')
-		$('#b11').animate({top:240, left: vw-350},500);
-		$('#b22').animate({top:240, left: vw-250},500);
-		$('#b33').animate({top:240, left: vw-150},500);
-		$('#b44').animate({top:240, left: vw-50},500);
-		$('#b55').animate({top:240, left: vw+50},500);
-		$('#b66').animate({top:240, left: vw+150},500);
-		$('#b77').animate({top:240, left: vw+250},500);
+		$('#b2').attr('id','b22');
+		$('#b3').attr('id','b33');
+		$('#b4').attr('id','b44');
+		$('#b5').attr('id','b55');
+		$('#b6').attr('id','b66');
+		$('#b7').attr('id','b77');
+		layoutWishBalloons();
 		$('.balloons').css('opacity','0.9');
 		$('.balloons h2').fadeIn(3000);
 		$(this).fadeOut('slow').delay(3000).promise().done(function(){
 			$('#story').fadeIn('slow');
 		});
 	});
-	
+
 	$('#story').click(function(){
 		$(this).fadeOut('slow');
 		$('.cake').fadeOut('fast').promise().done(function(){
 			$('.message').fadeIn('slow');
 		});
-		
-		var i;
+
+		var $wishLines = $('.message-card p');
 
 		function msgLoop (i) {
-			$("p:nth-child("+i+")").fadeOut('slow').delay(800).promise().done(function(){
-			i=i+1;
-			$("p:nth-child("+i+")").fadeIn('slow').delay(1000);
-			if(i==50){
-				$("p:nth-child(49)").fadeOut('slow').promise().done(function () {
+			if (i >= $wishLines.length) {
+				$wishLines.last().fadeOut('slow').promise().done(function () {
 					$('.cake').fadeIn('fast');
 				});
-				
+				return;
 			}
-			else{
-				msgLoop(i);
-			}			
-
-		});
-			// body...
+			$wishLines.eq(i).fadeIn('slow').delay(2200).promise().done(function () {
+				if (i < $wishLines.length - 1) {
+					$wishLines.eq(i).fadeOut('slow').promise().done(function () {
+						msgLoop(i + 1);
+					});
+				} else {
+					msgLoop(i + 1);
+				}
+			});
 		}
-		
+
+		$wishLines.hide();
 		msgLoop(0);
-		
 	});
 });
-
-
-
-
-//alert('hello');
