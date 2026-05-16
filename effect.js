@@ -65,7 +65,8 @@ $(document).ready(function(){
 		$('#bulb_green').addClass('bulb-glow-green');
 		$('#bulb_pink').addClass('bulb-glow-pink');
 		$('#bulb_orange').addClass('bulb-glow-orange');
-		$('body').addClass('peach');
+		$('body').removeClass('peach-after');
+		$('body').css('background', 'linear-gradient(165deg, #fff5f8 0%, #ffe8f0 45%, #ffe4ec 100%)');
 		$(this).fadeOut('slow').delay(5000).promise().done(function(){
 			$('#play').fadeIn('slow');
 		});
@@ -80,7 +81,7 @@ $(document).ready(function(){
 		$('#bulb_green').addClass('bulb-glow-green-after');
 		$('#bulb_pink').addClass('bulb-glow-pink-after');
 		$('#bulb_orange').addClass('bulb-glow-orange-after');
-		$('body').css('background-color','#FFF5F8');
+		$('body').css('background', 'linear-gradient(165deg, #fff5f8 0%, #ffe8f0 45%, #ffe4ec 100%)');
 		$('body').addClass('peach-after');
 		$(this).fadeOut('slow').delay(6000).promise().done(function(){
 			$('#bannar_coming').fadeIn('slow');

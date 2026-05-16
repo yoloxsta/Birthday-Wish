@@ -22,12 +22,12 @@ html {
 }
 
 body {
-	background: radial-gradient(ellipse at 50% 120%, #1a0a12 0%, #0d0508 55%, #000 100%);
-	-webkit-transition:background-color linear 5s;
-	-moz-transition:background-color linear 5s;
-	-o-transition:background-color linear 5s;
-	-ms-transition:background-color linear 5s;
-	transition:background-color linear 5s;
+	background: linear-gradient(165deg, #fff5f8 0%, #ffe8f0 45%, #ffe4ec 100%);
+	-webkit-transition:background linear 5s;
+	-moz-transition:background linear 5s;
+	-o-transition:background linear 5s;
+	-ms-transition:background linear 5s;
+	transition:background linear 5s;
 	overflow-x: hidden;
 	min-height: 100vh;
 	min-height: 100dvh;
@@ -44,7 +44,7 @@ body {
 	max-width: 100%;
 }
 .peach {
-	background: linear-gradient(165deg, var(--blush) 0%, var(--rose-light) 45%, #ffe4ec 100%);
+	background: linear-gradient(165deg, #fff5f8 0%, #ffe8f0 45%, #ffe4ec 100%) !important;
 }
 .peach-after {
 	-webkit-animation:peach_alive linear 8s infinite;
@@ -55,42 +55,42 @@ body {
 }
 
 @-webkit-keyframes peach_alive {
-	0%{ background-color: #fff5f8; }
-	25%{ background-color: #ffe8f0; }
-	50%{ background-color: #fff0f5; }
-	75%{ background-color: #ffe4ec; }
-	100%{ background-color: #fff5f8; }
+	0%{ background: linear-gradient(165deg, #fff5f8 0%, #ffe8f0 45%, #ffe4ec 100%); }
+	25%{ background: linear-gradient(165deg, #ffe8f0 0%, #ffd6e0 45%, #ffcce0 100%); }
+	50%{ background: linear-gradient(165deg, #fff0f5 0%, #ffe4ec 45%, #ffd6e0 100%); }
+	75%{ background: linear-gradient(165deg, #ffe4ec 0%, #ffd6e0 45%, #ffcce0 100%); }
+	100%{ background: linear-gradient(165deg, #fff5f8 0%, #ffe8f0 45%, #ffe4ec 100%); }
 }
 @-moz-keyframes peach_alive {
-	0%{ background-color: #fff5f8; }
-	25%{ background-color: #ffe8f0; }
-	50%{ background-color: #fff0f5; }
-	75%{ background-color: #ffe4ec; }
-	100%{ background-color: #fff5f8; }
+	0%{ background: linear-gradient(165deg, #fff5f8 0%, #ffe8f0 45%, #ffe4ec 100%); }
+	25%{ background: linear-gradient(165deg, #ffe8f0 0%, #ffd6e0 45%, #ffcce0 100%); }
+	50%{ background: linear-gradient(165deg, #fff0f5 0%, #ffe4ec 45%, #ffd6e0 100%); }
+	75%{ background: linear-gradient(165deg, #ffe4ec 0%, #ffd6e0 45%, #ffcce0 100%); }
+	100%{ background: linear-gradient(165deg, #fff5f8 0%, #ffe8f0 45%, #ffe4ec 100%); }
 }
 
 @-o-keyframes peach_alive {
-	0%{ background-color: #fff5f8; }
-	25%{ background-color: #ffe8f0; }
-	50%{ background-color: #fff0f5; }
-	75%{ background-color: #ffe4ec; }
-	100%{ background-color: #fff5f8; }
+	0%{ background: linear-gradient(165deg, #fff5f8 0%, #ffe8f0 45%, #ffe4ec 100%); }
+	25%{ background: linear-gradient(165deg, #ffe8f0 0%, #ffd6e0 45%, #ffcce0 100%); }
+	50%{ background: linear-gradient(165deg, #fff0f5 0%, #ffe4ec 45%, #ffd6e0 100%); }
+	75%{ background: linear-gradient(165deg, #ffe4ec 0%, #ffd6e0 45%, #ffcce0 100%); }
+	100%{ background: linear-gradient(165deg, #fff5f8 0%, #ffe8f0 45%, #ffe4ec 100%); }
 }
 
 @-ms-keyframes peach_alive {
-	0%{ background-color: #fff5f8; }
-	25%{ background-color: #ffe8f0; }
-	50%{ background-color: #fff0f5; }
-	75%{ background-color: #ffe4ec; }
-	100%{ background-color: #fff5f8; }
+	0%{ background: linear-gradient(165deg, #fff5f8 0%, #ffe8f0 45%, #ffe4ec 100%); }
+	25%{ background: linear-gradient(165deg, #ffe8f0 0%, #ffd6e0 45%, #ffcce0 100%); }
+	50%{ background: linear-gradient(165deg, #fff0f5 0%, #ffe4ec 45%, #ffd6e0 100%); }
+	75%{ background: linear-gradient(165deg, #ffe4ec 0%, #ffd6e0 45%, #ffcce0 100%); }
+	100%{ background: linear-gradient(165deg, #fff5f8 0%, #ffe8f0 45%, #ffe4ec 100%); }
 }
 
 @keyframes peach_alive {
-	0%{ background-color: #fff5f8; }
-	25%{ background-color: #ffe8f0; }
-	50%{ background-color: #fff0f5; }
-	75%{ background-color: #ffe4ec; }
-	100%{ background-color: #fff5f8; }
+	0%{ background: linear-gradient(165deg, #fff5f8 0%, #ffe8f0 45%, #ffe4ec 100%); }
+	25%{ background: linear-gradient(165deg, #ffe8f0 0%, #ffd6e0 45%, #ffcce0 100%); }
+	50%{ background: linear-gradient(165deg, #fff0f5 0%, #ffe4ec 45%, #ffd6e0 100%); }
+	75%{ background: linear-gradient(165deg, #ffe4ec 0%, #ffd6e0 45%, #ffcce0 100%); }
+	100%{ background: linear-gradient(165deg, #fff5f8 0%, #ffe8f0 45%, #ffe4ec 100%); }
 }
 
 
@@ -114,71 +114,87 @@ body {
 	-o-animation: bulb_glow_yellow linear 5s;
 	-ms-animation: bulb_glow_yellow linear 5s;
 	animation: bulb_glow_yellow linear 5s;
+	filter: drop-shadow(0 0 20px #ffd700) drop-shadow(0 0 40px #ffaa00) drop-shadow(0 0 60px #ff8800);
 }
 
 @-webkit-keyframes bulb_glow_yellow {
 	0%{
 		background-image: url('bulb.png');
 		opacity: 0;
+		filter: drop-shadow(0 0 0px #ffd700);
 	}
 	50%{
 		opacity: 1;
+		filter: drop-shadow(0 0 15px #ffd700) drop-shadow(0 0 30px #ffaa00);
 	}
 	100%{
 		background-image: url('bulb_yellow.png');
 		opacity: 1;
+		filter: drop-shadow(0 0 20px #ffd700) drop-shadow(0 0 40px #ffaa00) drop-shadow(0 0 60px #ff8800);
 	}
 }
 @-moz-keyframes bulb_glow_yellow {
 	0%{
 		background-image: url('bulb.png');
 		opacity: 0;
+		filter: drop-shadow(0 0 0px #ffd700);
 	}
 	50%{
 		opacity: 1;
+		filter: drop-shadow(0 0 15px #ffd700) drop-shadow(0 0 30px #ffaa00);
 	}
 	100%{
 		background-image: url('bulb_yellow.png');
 		opacity: 1;
+		filter: drop-shadow(0 0 20px #ffd700) drop-shadow(0 0 40px #ffaa00) drop-shadow(0 0 60px #ff8800);
 	}
 }
 @-o-keyframes bulb_glow_yellow {
 	0%{
 		background-image: url('bulb.png');
 		opacity: 0;
+		filter: drop-shadow(0 0 0px #ffd700);
 	}
 	50%{
 		opacity: 1;
+		filter: drop-shadow(0 0 15px #ffd700) drop-shadow(0 0 30px #ffaa00);
 	}
 	100%{
 		background-image: url('bulb_yellow.png');
 		opacity: 1;
+		filter: drop-shadow(0 0 20px #ffd700) drop-shadow(0 0 40px #ffaa00) drop-shadow(0 0 60px #ff8800);
 	}
 }
 @-ms-keyframes bulb_glow_yellow {
 	0%{
 		background-image: url('bulb.png');
 		opacity: 0;
+		filter: drop-shadow(0 0 0px #ffd700);
 	}
 	50%{
 		opacity: 1;
+		filter: drop-shadow(0 0 15px #ffd700) drop-shadow(0 0 30px #ffaa00);
 	}
 	100%{
 		background-image: url('bulb_yellow.png');
 		opacity: 1;
+		filter: drop-shadow(0 0 20px #ffd700) drop-shadow(0 0 40px #ffaa00) drop-shadow(0 0 60px #ff8800);
 	}
 }
 @keyframes bulb_glow_yellow {
 	0%{
 		background-image: url('bulb.png');
 		opacity: 0;
+		filter: drop-shadow(0 0 0px #ffd700);
 	}
 	50%{
 		opacity: 1;
+		filter: drop-shadow(0 0 15px #ffd700) drop-shadow(0 0 30px #ffaa00);
 	}
 	100%{
 		background-image: url('bulb_yellow.png');
 		opacity: 1;
+		filter: drop-shadow(0 0 20px #ffd700) drop-shadow(0 0 40px #ffaa00) drop-shadow(0 0 60px #ff8800);
 	}
 }
 
@@ -189,71 +205,87 @@ body {
 	-o-animation: bulb_glow_red linear 5s;
 	-ms-animation: bulb_glow_red linear 5s;
 	animation: bulb_glow_red linear 5s;
+	filter: drop-shadow(0 0 20px #ff4444) drop-shadow(0 0 40px #ff0000) drop-shadow(0 0 60px #cc0000);
 }
 
 @-webkit-keyframes bulb_glow_red {
 	0%{
 		background-image: url('bulb.png');
 		opacity: 0;
+		filter: drop-shadow(0 0 0px #ff4444);
 	}
 	50%{
 		opacity: 1;
+		filter: drop-shadow(0 0 15px #ff4444) drop-shadow(0 0 30px #ff0000);
 	}
 	100%{
 		background-image: url('bulb_red.png');
 		opacity: 1;
+		filter: drop-shadow(0 0 20px #ff4444) drop-shadow(0 0 40px #ff0000) drop-shadow(0 0 60px #cc0000);
 	}
 }
 @-moz-keyframes bulb_glow_red {
 	0%{
 		background-image: url('bulb.png');
 		opacity: 0;
+		filter: drop-shadow(0 0 0px #ff4444);
 	}
 	50%{
 		opacity: 1;
+		filter: drop-shadow(0 0 15px #ff4444) drop-shadow(0 0 30px #ff0000);
 	}
 	100%{
 		background-image: url('bulb_red.png');
 		opacity: 1;
+		filter: drop-shadow(0 0 20px #ff4444) drop-shadow(0 0 40px #ff0000) drop-shadow(0 0 60px #cc0000);
 	}
 }
 @-o-keyframes bulb_glow_red {
 	0%{
 		background-image: url('bulb.png');
 		opacity: 0;
+		filter: drop-shadow(0 0 0px #ff4444);
 	}
 	50%{
 		opacity: 1;
+		filter: drop-shadow(0 0 15px #ff4444) drop-shadow(0 0 30px #ff0000);
 	}
 	100%{
 		background-image: url('bulb_red.png');
 		opacity: 1;
+		filter: drop-shadow(0 0 20px #ff4444) drop-shadow(0 0 40px #ff0000) drop-shadow(0 0 60px #cc0000);
 	}
 }
 @-ms-keyframes bulb_glow_red {
 	0%{
 		background-image: url('bulb.png');
 		opacity: 0;
+		filter: drop-shadow(0 0 0px #ff4444);
 	}
 	50%{
 		opacity: 1;
+		filter: drop-shadow(0 0 15px #ff4444) drop-shadow(0 0 30px #ff0000);
 	}
 	100%{
 		background-image: url('bulb_red.png');
 		opacity: 1;
+		filter: drop-shadow(0 0 20px #ff4444) drop-shadow(0 0 40px #ff0000) drop-shadow(0 0 60px #cc0000);
 	}
 }
 @keyframes bulb_glow_red {
 	0%{
 		background-image: url('bulb.png');
 		opacity: 0;
+		filter: drop-shadow(0 0 0px #ff4444);
 	}
 	50%{
 		opacity: 1;
+		filter: drop-shadow(0 0 15px #ff4444) drop-shadow(0 0 30px #ff0000);
 	}
 	100%{
 		background-image: url('bulb_red.png');
 		opacity: 1;
+		filter: drop-shadow(0 0 20px #ff4444) drop-shadow(0 0 40px #ff0000) drop-shadow(0 0 60px #cc0000);
 	}
 }
 .bulb-glow-blue {
@@ -263,71 +295,87 @@ body {
 	-o-animation: bulb_glow_blue linear 5s;
 	-ms-animation: bulb_glow_blue linear 5s;
 	animation: bulb_glow_blue linear 5s;
+	filter: drop-shadow(0 0 20px #4da6ff) drop-shadow(0 0 40px #0066ff) drop-shadow(0 0 60px #0044cc);
 }
 
 @-webkit-keyframes bulb_glow_blue {
 	0%{
 		background-image: url('bulb.png');
 		opacity: 0;
+		filter: drop-shadow(0 0 0px #4da6ff);
 	}
 	50%{
 		opacity: 1;
+		filter: drop-shadow(0 0 15px #4da6ff) drop-shadow(0 0 30px #0066ff);
 	}
 	100%{
 		background-image: url('bulb_blue.png');
 		opacity: 1;
+		filter: drop-shadow(0 0 20px #4da6ff) drop-shadow(0 0 40px #0066ff) drop-shadow(0 0 60px #0044cc);
 	}
 }
 @-moz-keyframes bulb_glow_blue {
 	0%{
 		background-image: url('bulb.png');
 		opacity: 0;
+		filter: drop-shadow(0 0 0px #4da6ff);
 	}
 	50%{
 		opacity: 1;
+		filter: drop-shadow(0 0 15px #4da6ff) drop-shadow(0 0 30px #0066ff);
 	}
 	100%{
 		background-image: url('bulb_blue.png');
 		opacity: 1;
+		filter: drop-shadow(0 0 20px #4da6ff) drop-shadow(0 0 40px #0066ff) drop-shadow(0 0 60px #0044cc);
 	}
 }
 @-o-keyframes bulb_glow_blue {
 	0%{
 		background-image: url('bulb.png');
 		opacity: 0;
+		filter: drop-shadow(0 0 0px #4da6ff);
 	}
 	50%{
 		opacity: 1;
+		filter: drop-shadow(0 0 15px #4da6ff) drop-shadow(0 0 30px #0066ff);
 	}
 	100%{
 		background-image: url('bulb_blue.png');
 		opacity: 1;
+		filter: drop-shadow(0 0 20px #4da6ff) drop-shadow(0 0 40px #0066ff) drop-shadow(0 0 60px #0044cc);
 	}
 }
 @-ms-keyframes bulb_glow_blue {
 	0%{
 		background-image: url('bulb.png');
 		opacity: 0;
+		filter: drop-shadow(0 0 0px #4da6ff);
 	}
 	50%{
 		opacity: 1;
+		filter: drop-shadow(0 0 15px #4da6ff) drop-shadow(0 0 30px #0066ff);
 	}
 	100%{
 		background-image: url('bulb_blue.png');
 		opacity: 1;
+		filter: drop-shadow(0 0 20px #4da6ff) drop-shadow(0 0 40px #0066ff) drop-shadow(0 0 60px #0044cc);
 	}
 }
 @keyframes bulb_glow_blue {
 	0%{
 		background-image: url('bulb.png');
 		opacity: 0;
+		filter: drop-shadow(0 0 0px #4da6ff);
 	}
 	50%{
 		opacity: 1;
+		filter: drop-shadow(0 0 15px #4da6ff) drop-shadow(0 0 30px #0066ff);
 	}
 	100%{
 		background-image: url('bulb_blue.png');
 		opacity: 1;
+		filter: drop-shadow(0 0 20px #4da6ff) drop-shadow(0 0 40px #0066ff) drop-shadow(0 0 60px #0044cc);
 	}
 }
 
@@ -338,71 +386,87 @@ body {
 	-o-animation: bulb_glow_green linear 5s;
 	-ms-animation: bulb_glow_green linear 5s;
 	animation: bulb_glow_green linear 5s;
+	filter: drop-shadow(0 0 20px #44ff44) drop-shadow(0 0 40px #00cc00) drop-shadow(0 0 60px #009900);
 }
 
 @-webkit-keyframes bulb_glow_green {
 	0%{
 		background-image: url('bulb.png');
 		opacity: 0;
+		filter: drop-shadow(0 0 0px #44ff44);
 	}
 	50%{
 		opacity: 1;
+		filter: drop-shadow(0 0 15px #44ff44) drop-shadow(0 0 30px #00cc00);
 	}
 	100%{
 		background-image: url('bulb_green.png');
 		opacity: 1;
+		filter: drop-shadow(0 0 20px #44ff44) drop-shadow(0 0 40px #00cc00) drop-shadow(0 0 60px #009900);
 	}
 }
 @-moz-keyframes bulb_glow_green {
 	0%{
 		background-image: url('bulb.png');
 		opacity: 0;
+		filter: drop-shadow(0 0 0px #44ff44);
 	}
 	50%{
 		opacity: 1;
+		filter: drop-shadow(0 0 15px #44ff44) drop-shadow(0 0 30px #00cc00);
 	}
 	100%{
 		background-image: url('bulb_green.png');
 		opacity: 1;
+		filter: drop-shadow(0 0 20px #44ff44) drop-shadow(0 0 40px #00cc00) drop-shadow(0 0 60px #009900);
 	}
 }
 @-o-keyframes bulb_glow_green {
 	0%{
 		background-image: url('bulb.png');
 		opacity: 0;
+		filter: drop-shadow(0 0 0px #44ff44);
 	}
 	50%{
 		opacity: 1;
+		filter: drop-shadow(0 0 15px #44ff44) drop-shadow(0 0 30px #00cc00);
 	}
 	100%{
 		background-image: url('bulb_green.png');
 		opacity: 1;
+		filter: drop-shadow(0 0 20px #44ff44) drop-shadow(0 0 40px #00cc00) drop-shadow(0 0 60px #009900);
 	}
 }
 @-ms-keyframes bulb_glow_green {
 	0%{
 		background-image: url('bulb.png');
 		opacity: 0;
+		filter: drop-shadow(0 0 0px #44ff44);
 	}
 	50%{
 		opacity: 1;
+		filter: drop-shadow(0 0 15px #44ff44) drop-shadow(0 0 30px #00cc00);
 	}
 	100%{
 		background-image: url('bulb_green.png');
 		opacity: 1;
+		filter: drop-shadow(0 0 20px #44ff44) drop-shadow(0 0 40px #00cc00) drop-shadow(0 0 60px #009900);
 	}
 }
 @keyframes bulb_glow_green {
 	0%{
 		background-image: url('bulb.png');
 		opacity: 0;
+		filter: drop-shadow(0 0 0px #44ff44);
 	}
 	50%{
 		opacity: 1;
+		filter: drop-shadow(0 0 15px #44ff44) drop-shadow(0 0 30px #00cc00);
 	}
 	100%{
 		background-image: url('bulb_green.png');
 		opacity: 1;
+		filter: drop-shadow(0 0 20px #44ff44) drop-shadow(0 0 40px #00cc00) drop-shadow(0 0 60px #009900);
 	}
 }
 
@@ -413,71 +477,87 @@ body {
 	-o-animation: bulb_glow_pink linear 5s;
 	-ms-animation: bulb_glow_pink linear 5s;
 	animation: bulb_glow_pink linear 5s;
+	filter: drop-shadow(0 0 20px #ff66b2) drop-shadow(0 0 40px #ff3399) drop-shadow(0 0 60px #cc0066);
 }
 
 @-webkit-keyframes bulb_glow_pink {
 	0%{
 		background-image: url('bulb.png');
 		opacity: 0;
+		filter: drop-shadow(0 0 0px #ff66b2);
 	}
 	50%{
 		opacity: 1;
+		filter: drop-shadow(0 0 15px #ff66b2) drop-shadow(0 0 30px #ff3399);
 	}
 	100%{
 		background-image: url('bulb_pink.png');
 		opacity: 1;
+		filter: drop-shadow(0 0 20px #ff66b2) drop-shadow(0 0 40px #ff3399) drop-shadow(0 0 60px #cc0066);
 	}
 }
 @-moz-keyframes bulb_glow_pink {
 	0%{
 		background-image: url('bulb.png');
 		opacity: 0;
+		filter: drop-shadow(0 0 0px #ff66b2);
 	}
 	50%{
 		opacity: 1;
+		filter: drop-shadow(0 0 15px #ff66b2) drop-shadow(0 0 30px #ff3399);
 	}
 	100%{
 		background-image: url('bulb_pink.png');
 		opacity: 1;
+		filter: drop-shadow(0 0 20px #ff66b2) drop-shadow(0 0 40px #ff3399) drop-shadow(0 0 60px #cc0066);
 	}
 }
 @-o-keyframes bulb_glow_pink {
 	0%{
 		background-image: url('bulb.png');
 		opacity: 0;
+		filter: drop-shadow(0 0 0px #ff66b2);
 	}
 	50%{
 		opacity: 1;
+		filter: drop-shadow(0 0 15px #ff66b2) drop-shadow(0 0 30px #ff3399);
 	}
 	100%{
 		background-image: url('bulb_pink.png');
 		opacity: 1;
+		filter: drop-shadow(0 0 20px #ff66b2) drop-shadow(0 0 40px #ff3399) drop-shadow(0 0 60px #cc0066);
 	}
 }
 @-ms-keyframes bulb_glow_pink {
 	0%{
 		background-image: url('bulb.png');
 		opacity: 0;
+		filter: drop-shadow(0 0 0px #ff66b2);
 	}
 	50%{
 		opacity: 1;
+		filter: drop-shadow(0 0 15px #ff66b2) drop-shadow(0 0 30px #ff3399);
 	}
 	100%{
 		background-image: url('bulb_pink.png');
 		opacity: 1;
+		filter: drop-shadow(0 0 20px #ff66b2) drop-shadow(0 0 40px #ff3399) drop-shadow(0 0 60px #cc0066);
 	}
 }
 @keyframes bulb_glow_pink {
 	0%{
 		background-image: url('bulb.png');
 		opacity: 0;
+		filter: drop-shadow(0 0 0px #ff66b2);
 	}
 	50%{
 		opacity: 1;
+		filter: drop-shadow(0 0 15px #ff66b2) drop-shadow(0 0 30px #ff3399);
 	}
 	100%{
 		background-image: url('bulb_pink.png');
 		opacity: 1;
+		filter: drop-shadow(0 0 20px #ff66b2) drop-shadow(0 0 40px #ff3399) drop-shadow(0 0 60px #cc0066);
 	}
 }
 
@@ -488,71 +568,87 @@ body {
 	-o-animation: bulb_glow_orange linear 5s;
 	-ms-animation: bulb_glow_orange linear 5s;
 	animation: bulb_glow_orange linear 5s;
+	filter: drop-shadow(0 0 20px #ff9933) drop-shadow(0 0 40px #ff6600) drop-shadow(0 0 60px #cc4400);
 }
 
 @-webkit-keyframes bulb_glow_orange {
 	0%{
 		background-image: url('bulb.png');
 		opacity: 0;
+		filter: drop-shadow(0 0 0px #ff9933);
 	}
 	50%{
 		opacity: 1;
+		filter: drop-shadow(0 0 15px #ff9933) drop-shadow(0 0 30px #ff6600);
 	}
 	100%{
 		background-image: url('bulb_orange.png');
 		opacity: 1;
+		filter: drop-shadow(0 0 20px #ff9933) drop-shadow(0 0 40px #ff6600) drop-shadow(0 0 60px #cc4400);
 	}
 }
 @-moz-keyframes bulb_glow_orange {
 	0%{
 		background-image: url('bulb.png');
 		opacity: 0;
+		filter: drop-shadow(0 0 0px #ff9933);
 	}
 	50%{
 		opacity: 1;
+		filter: drop-shadow(0 0 15px #ff9933) drop-shadow(0 0 30px #ff6600);
 	}
 	100%{
 		background-image: url('bulb_orange.png');
 		opacity: 1;
+		filter: drop-shadow(0 0 20px #ff9933) drop-shadow(0 0 40px #ff6600) drop-shadow(0 0 60px #cc4400);
 	}
 }
 @-o-keyframes bulb_glow_orange {
 	0%{
 		background-image: url('bulb.png');
 		opacity: 0;
+		filter: drop-shadow(0 0 0px #ff9933);
 	}
 	50%{
 		opacity: 1;
+		filter: drop-shadow(0 0 15px #ff9933) drop-shadow(0 0 30px #ff6600);
 	}
 	100%{
 		background-image: url('bulb_orange.png');
 		opacity: 1;
+		filter: drop-shadow(0 0 20px #ff9933) drop-shadow(0 0 40px #ff6600) drop-shadow(0 0 60px #cc4400);
 	}
 }
 @-ms-keyframes bulb_glow_orange {
 	0%{
 		background-image: url('bulb.png');
 		opacity: 0;
+		filter: drop-shadow(0 0 0px #ff9933);
 	}
 	50%{
 		opacity: 1;
+		filter: drop-shadow(0 0 15px #ff9933) drop-shadow(0 0 30px #ff6600);
 	}
 	100%{
 		background-image: url('bulb_orange.png');
 		opacity: 1;
+		filter: drop-shadow(0 0 20px #ff9933) drop-shadow(0 0 40px #ff6600) drop-shadow(0 0 60px #cc4400);
 	}
 }
 @keyframes bulb_glow_orange {
 	0%{
 		background-image: url('bulb.png');
 		opacity: 0;
+		filter: drop-shadow(0 0 0px #ff9933);
 	}
 	50%{
 		opacity: 1;
+		filter: drop-shadow(0 0 15px #ff9933) drop-shadow(0 0 30px #ff6600);
 	}
 	100%{
 		background-image: url('bulb_orange.png');
 		opacity: 1;
+		filter: drop-shadow(0 0 20px #ff9933) drop-shadow(0 0 40px #ff6600) drop-shadow(0 0 60px #cc4400);
 	}
 }
 
@@ -570,56 +666,71 @@ body {
 @-webkit-keyframes bulb_glow_yellow_after {
 	0%{
 		background-image: url('bulb.png');
+		filter: drop-shadow(0 0 5px #ffd700);
 	}
 	50%{
 		background-image: url('bulb_yellow.png');
+		filter: drop-shadow(0 0 25px #ffd700) drop-shadow(0 0 50px #ffaa00) drop-shadow(0 0 70px #ff8800);
 	}
 	100%{
 		background-image: url('bulb.png');
+		filter: drop-shadow(0 0 5px #ffd700);
 	}
 }
 @-moz-keyframes bulb_glow_yellow_after {
 	0%{
 		background-image: url('bulb.png');
+		filter: drop-shadow(0 0 5px #ffd700);
 	}
 	50%{
 		background-image: url('bulb_yellow.png');
+		filter: drop-shadow(0 0 25px #ffd700) drop-shadow(0 0 50px #ffaa00) drop-shadow(0 0 70px #ff8800);
 	}
 	100%{
 		background-image: url('bulb.png');
+		filter: drop-shadow(0 0 5px #ffd700);
 	}
 }
 @-o-keyframes bulb_glow_yellow_after {
 	0%{
 		background-image: url('bulb.png');
+		filter: drop-shadow(0 0 5px #ffd700);
 	}
 	50%{
 		background-image: url('bulb_yellow.png');
+		filter: drop-shadow(0 0 25px #ffd700) drop-shadow(0 0 50px #ffaa00) drop-shadow(0 0 70px #ff8800);
 	}
 	100%{
 		background-image: url('bulb.png');
+		filter: drop-shadow(0 0 5px #ffd700);
 	}
 }
 @-ms-keyframes bulb_glow_yellow_after {
 	0%{
 		background-image: url('bulb.png');
+		filter: drop-shadow(0 0 5px #ffd700);
 	}
 	50%{
 		background-image: url('bulb_yellow.png');
+		filter: drop-shadow(0 0 25px #ffd700) drop-shadow(0 0 50px #ffaa00) drop-shadow(0 0 70px #ff8800);
 	}
 	100%{
 		background-image: url('bulb.png');
+		filter: drop-shadow(0 0 5px #ffd700);
 	}
 }
 @keyframes bulb_glow_yellow_after {
 	0%{
 		background-image: url('bulb.png');
+		filter: drop-shadow(0 0 5px #ffd700);
 	}
 	50%{
 		background-image: url('bulb_yellow.png');
+		filter: drop-shadow(0 0 25px #ffd700) drop-shadow(0 0 50px #ffaa00) drop-shadow(0 0 70px #ff8800);
 	}
 	100%{
 		background-image: url('bulb.png');
+		filter: drop-shadow(0 0 5px #ffd700);
 	}
 }
 
@@ -635,56 +746,71 @@ body {
 @-webkit-keyframes bulb_glow_red_after {
 	0%{
 		background-image: url('bulb.png');
+		filter: drop-shadow(0 0 5px #ff4444);
 	}
 	50%{
 		background-image: url('bulb_red.png');
+		filter: drop-shadow(0 0 25px #ff4444) drop-shadow(0 0 50px #ff0000) drop-shadow(0 0 70px #cc0000);
 	}
 	100%{
 		background-image: url('bulb.png');
+		filter: drop-shadow(0 0 5px #ff4444);
 	}
 }
 @-moz-keyframes bulb_glow_red_after {
 	0%{
 		background-image: url('bulb.png');
+		filter: drop-shadow(0 0 5px #ff4444);
 	}
 	50%{
 		background-image: url('bulb_red.png');
+		filter: drop-shadow(0 0 25px #ff4444) drop-shadow(0 0 50px #ff0000) drop-shadow(0 0 70px #cc0000);
 	}
 	100%{
 		background-image: url('bulb.png');
+		filter: drop-shadow(0 0 5px #ff4444);
 	}
 }
 @-o-keyframes bulb_glow_red_after {
 	0%{
 		background-image: url('bulb.png');
+		filter: drop-shadow(0 0 5px #ff4444);
 	}
 	50%{
 		background-image: url('bulb_red.png');
+		filter: drop-shadow(0 0 25px #ff4444) drop-shadow(0 0 50px #ff0000) drop-shadow(0 0 70px #cc0000);
 	}
 	100%{
 		background-image: url('bulb.png');
+		filter: drop-shadow(0 0 5px #ff4444);
 	}
 }
 @-ms-keyframes bulb_glow_red_after {
 	0%{
 		background-image: url('bulb.png');
+		filter: drop-shadow(0 0 5px #ff4444);
 	}
 	50%{
 		background-image: url('bulb_red.png');
+		filter: drop-shadow(0 0 25px #ff4444) drop-shadow(0 0 50px #ff0000) drop-shadow(0 0 70px #cc0000);
 	}
 	100%{
 		background-image: url('bulb.png');
+		filter: drop-shadow(0 0 5px #ff4444);
 	}
 }
 @keyframes bulb_glow_red_after {
 	0%{
 		background-image: url('bulb.png');
+		filter: drop-shadow(0 0 5px #ff4444);
 	}
 	50%{
 		background-image: url('bulb_red.png');
+		filter: drop-shadow(0 0 25px #ff4444) drop-shadow(0 0 50px #ff0000) drop-shadow(0 0 70px #cc0000);
 	}
 	100%{
 		background-image: url('bulb.png');
+		filter: drop-shadow(0 0 5px #ff4444);
 	}
 }
 
@@ -700,56 +826,71 @@ body {
 @-webkit-keyframes bulb_glow_blue_after {
 	0%{
 		background-image: url('bulb.png');
+		filter: drop-shadow(0 0 5px #4da6ff);
 	}
 	50%{
 		background-image: url('bulb_blue.png');
+		filter: drop-shadow(0 0 25px #4da6ff) drop-shadow(0 0 50px #0066ff) drop-shadow(0 0 70px #0044cc);
 	}
 	100%{
 		background-image: url('bulb.png');
+		filter: drop-shadow(0 0 5px #4da6ff);
 	}
 }
 @-moz-keyframes bulb_glow_blue_after {
 	0%{
 		background-image: url('bulb.png');
+		filter: drop-shadow(0 0 5px #4da6ff);
 	}
 	50%{
 		background-image: url('bulb_blue.png');
+		filter: drop-shadow(0 0 25px #4da6ff) drop-shadow(0 0 50px #0066ff) drop-shadow(0 0 70px #0044cc);
 	}
 	100%{
 		background-image: url('bulb.png');
+		filter: drop-shadow(0 0 5px #4da6ff);
 	}
 }
 @-o-keyframes bulb_glow_blue_after {
 	0%{
 		background-image: url('bulb.png');
+		filter: drop-shadow(0 0 5px #4da6ff);
 	}
 	50%{
 		background-image: url('bulb_blue.png');
+		filter: drop-shadow(0 0 25px #4da6ff) drop-shadow(0 0 50px #0066ff) drop-shadow(0 0 70px #0044cc);
 	}
 	100%{
 		background-image: url('bulb.png');
+		filter: drop-shadow(0 0 5px #4da6ff);
 	}
 }
 @-ms-keyframes bulb_glow_blue_after {
 	0%{
 		background-image: url('bulb.png');
+		filter: drop-shadow(0 0 5px #4da6ff);
 	}
 	50%{
 		background-image: url('bulb_blue.png');
+		filter: drop-shadow(0 0 25px #4da6ff) drop-shadow(0 0 50px #0066ff) drop-shadow(0 0 70px #0044cc);
 	}
 	100%{
 		background-image: url('bulb.png');
+		filter: drop-shadow(0 0 5px #4da6ff);
 	}
 }
 @keyframes bulb_glow_blue_after {
 	0%{
 		background-image: url('bulb.png');
+		filter: drop-shadow(0 0 5px #4da6ff);
 	}
 	50%{
 		background-image: url('bulb_blue.png');
+		filter: drop-shadow(0 0 25px #4da6ff) drop-shadow(0 0 50px #0066ff) drop-shadow(0 0 70px #0044cc);
 	}
 	100%{
 		background-image: url('bulb.png');
+		filter: drop-shadow(0 0 5px #4da6ff);
 	}
 }
 .bulb-glow-green-after {
@@ -764,57 +905,72 @@ body {
 @-webkit-keyframes bulb_glow_green_after {
 	0%{
 		background-image: url('bulb.png');
+		filter: drop-shadow(0 0 5px #44ff44);
 	}
 	50%{
 		background-image: url('bulb_green.png');
+		filter: drop-shadow(0 0 25px #44ff44) drop-shadow(0 0 50px #00cc00) drop-shadow(0 0 70px #009900);
 	}
 	100%{
 		background-image: url('bulb.png');
+		filter: drop-shadow(0 0 5px #44ff44);
 	}
 }
 
 @-moz-keyframes bulb_glow_green_after {
 	0%{
 		background-image: url('bulb.png');
+		filter: drop-shadow(0 0 5px #44ff44);
 	}
 	50%{
 		background-image: url('bulb_green.png');
+		filter: drop-shadow(0 0 25px #44ff44) drop-shadow(0 0 50px #00cc00) drop-shadow(0 0 70px #009900);
 	}
 	100%{
 		background-image: url('bulb.png');
+		filter: drop-shadow(0 0 5px #44ff44);
 	}
 }
 @-o-keyframes bulb_glow_green_after {
 	0%{
 		background-image: url('bulb.png');
+		filter: drop-shadow(0 0 5px #44ff44);
 	}
 	50%{
 		background-image: url('bulb_green.png');
+		filter: drop-shadow(0 0 25px #44ff44) drop-shadow(0 0 50px #00cc00) drop-shadow(0 0 70px #009900);
 	}
 	100%{
 		background-image: url('bulb.png');
+		filter: drop-shadow(0 0 5px #44ff44);
 	}
 }
 @-ms-keyframes bulb_glow_green_after {
 	0%{
 		background-image: url('bulb.png');
+		filter: drop-shadow(0 0 5px #44ff44);
 	}
 	50%{
 		background-image: url('bulb_green.png');
+		filter: drop-shadow(0 0 25px #44ff44) drop-shadow(0 0 50px #00cc00) drop-shadow(0 0 70px #009900);
 	}
 	100%{
 		background-image: url('bulb.png');
+		filter: drop-shadow(0 0 5px #44ff44);
 	}
 }
 @keyframes bulb_glow_green_after {
 	0%{
 		background-image: url('bulb.png');
+		filter: drop-shadow(0 0 5px #44ff44);
 	}
 	50%{
 		background-image: url('bulb_green.png');
+		filter: drop-shadow(0 0 25px #44ff44) drop-shadow(0 0 50px #00cc00) drop-shadow(0 0 70px #009900);
 	}
 	100%{
 		background-image: url('bulb.png');
+		filter: drop-shadow(0 0 5px #44ff44);
 	}
 }
 .bulb-glow-pink-after {
@@ -829,56 +985,71 @@ body {
 @-webkit-keyframes bulb_glow_pink_after {
 	0%{
 		background-image: url('bulb.png');
+		filter: drop-shadow(0 0 5px #ff66b2);
 	}
 	50%{
 		background-image: url('bulb_pink.png');
+		filter: drop-shadow(0 0 25px #ff66b2) drop-shadow(0 0 50px #ff3399) drop-shadow(0 0 70px #cc0066);
 	}
 	100%{
 		background-image: url('bulb.png');
+		filter: drop-shadow(0 0 5px #ff66b2);
 	}
 }
 @-moz-keyframes bulb_glow_pink_after {
 	0%{
 		background-image: url('bulb.png');
+		filter: drop-shadow(0 0 5px #ff66b2);
 	}
 	50%{
 		background-image: url('bulb_pink.png');
+		filter: drop-shadow(0 0 25px #ff66b2) drop-shadow(0 0 50px #ff3399) drop-shadow(0 0 70px #cc0066);
 	}
 	100%{
 		background-image: url('bulb.png');
+		filter: drop-shadow(0 0 5px #ff66b2);
 	}
 }
 @-o-keyframes bulb_glow_pink_after {
 	0%{
 		background-image: url('bulb.png');
+		filter: drop-shadow(0 0 5px #ff66b2);
 	}
 	50%{
 		background-image: url('bulb_pink.png');
+		filter: drop-shadow(0 0 25px #ff66b2) drop-shadow(0 0 50px #ff3399) drop-shadow(0 0 70px #cc0066);
 	}
 	100%{
 		background-image: url('bulb.png');
+		filter: drop-shadow(0 0 5px #ff66b2);
 	}
 }
 @-ms-keyframes bulb_glow_pink_after {
 	0%{
 		background-image: url('bulb.png');
+		filter: drop-shadow(0 0 5px #ff66b2);
 	}
 	50%{
 		background-image: url('bulb_pink.png');
+		filter: drop-shadow(0 0 25px #ff66b2) drop-shadow(0 0 50px #ff3399) drop-shadow(0 0 70px #cc0066);
 	}
 	100%{
 		background-image: url('bulb.png');
+		filter: drop-shadow(0 0 5px #ff66b2);
 	}
 }
 @keyframes bulb_glow_pink_after {
 	0%{
 		background-image: url('bulb.png');
+		filter: drop-shadow(0 0 5px #ff66b2);
 	}
 	50%{
 		background-image: url('bulb_pink.png');
+		filter: drop-shadow(0 0 25px #ff66b2) drop-shadow(0 0 50px #ff3399) drop-shadow(0 0 70px #cc0066);
 	}
 	100%{
 		background-image: url('bulb.png');
+		filter: drop-shadow(0 0 5px #ff66b2);
 	}
 }
 .bulb-glow-orange-after {
@@ -893,56 +1064,71 @@ body {
 @-webkit-keyframes bulb_glow_orange_after {
 	0%{
 		background-image: url('bulb.png');
+		filter: drop-shadow(0 0 5px #ff9933);
 	}
 	50%{
 		background-image: url('bulb_orange.png');
+		filter: drop-shadow(0 0 25px #ff9933) drop-shadow(0 0 50px #ff6600) drop-shadow(0 0 70px #cc4400);
 	}
 	100%{
 		background-image: url('bulb.png');
+		filter: drop-shadow(0 0 5px #ff9933);
 	}
 }
 @-moz-keyframes bulb_glow_orange_after {
 	0%{
 		background-image: url('bulb.png');
+		filter: drop-shadow(0 0 5px #ff9933);
 	}
 	50%{
 		background-image: url('bulb_orange.png');
+		filter: drop-shadow(0 0 25px #ff9933) drop-shadow(0 0 50px #ff6600) drop-shadow(0 0 70px #cc4400);
 	}
 	100%{
 		background-image: url('bulb.png');
+		filter: drop-shadow(0 0 5px #ff9933);
 	}
 }
 @-o-keyframes bulb_glow_orange_after {
 	0%{
 		background-image: url('bulb.png');
+		filter: drop-shadow(0 0 5px #ff9933);
 	}
 	50%{
 		background-image: url('bulb_orange.png');
+		filter: drop-shadow(0 0 25px #ff9933) drop-shadow(0 0 50px #ff6600) drop-shadow(0 0 70px #cc4400);
 	}
 	100%{
 		background-image: url('bulb.png');
+		filter: drop-shadow(0 0 5px #ff9933);
 	}
 }
 @-ms-keyframes bulb_glow_orange_after {
 	0%{
 		background-image: url('bulb.png');
+		filter: drop-shadow(0 0 5px #ff9933);
 	}
 	50%{
 		background-image: url('bulb_orange.png');
+		filter: drop-shadow(0 0 25px #ff9933) drop-shadow(0 0 50px #ff6600) drop-shadow(0 0 70px #cc4400);
 	}
 	100%{
 		background-image: url('bulb.png');
+		filter: drop-shadow(0 0 5px #ff9933);
 	}
 }
 @keyframes bulb_glow_orange_after {
 	0%{
 		background-image: url('bulb.png');
+		filter: drop-shadow(0 0 5px #ff9933);
 	}
 	50%{
 		background-image: url('bulb_orange.png');
+		filter: drop-shadow(0 0 25px #ff9933) drop-shadow(0 0 50px #ff6600) drop-shadow(0 0 70px #cc4400);
 	}
 	100%{
 		background-image: url('bulb.png');
+		filter: drop-shadow(0 0 5px #ff9933);
 	}
 }
 audio {
