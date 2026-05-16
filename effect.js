@@ -114,14 +114,31 @@ $(document).ready(function(){
 	});
 
 	$('#cake_fadein').click(function(){
-		$('.cake').fadeIn('slow');
+		$('.jennie-row').fadeOut(300).addClass('is-hidden');
+		$('.cake-stage').fadeIn('slow');
 		$(this).fadeOut('slow').delay(3000).promise().done(function(){
 			$('#light_candle').fadeIn('slow');
 		});
 	});
 
 	$('#light_candle').click(function(){
-		$('.fuego').fadeIn('slow');
+		$('.jennie-row').fadeOut(400).addClass('is-hidden');
+		$('.cake-cover').addClass('candles-glow focus-cake');
+		
+		// Light all candles with staggered animation
+		$('.candle').each(function(index) {
+			var $candle = $(this);
+			setTimeout(function() {
+				$candle.addClass('is-lit');
+			}, index * 150);
+		});
+		
+		var $cover = $('.cake-cover');
+		if ($cover.length) {
+			$('html, body').animate({
+				scrollTop: Math.max(0, $cover.offset().top - 24)
+			}, 450);
+		}
 		$(this).fadeOut('slow').promise().done(function(){
 			$('#wish_message').fadeIn('slow');
 		});
@@ -146,7 +163,7 @@ $(document).ready(function(){
 
 	$('#story').click(function(){
 		$(this).fadeOut('slow');
-		$('.cake').fadeOut('fast').promise().done(function(){
+		$('.cake-stage').fadeOut('fast').promise().done(function(){
 			$('.message').fadeIn('slow');
 		});
 
@@ -155,7 +172,9 @@ $(document).ready(function(){
 		function msgLoop (i) {
 			if (i >= $wishLines.length) {
 				$wishLines.last().fadeOut('slow').promise().done(function () {
-					$('.cake').fadeIn('fast');
+					$('.cake-stage').fadeIn('fast');
+					// Re-light all candles when cake reappears
+					$('.candle').addClass('is-lit');
 				});
 				return;
 			}
